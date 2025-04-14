@@ -30,7 +30,7 @@
         async function loadRequests() {
             try {
                 // Отправляем логин и пароль на сервер без хеширования
-                const authResponse = await fetch('http://airy-enjoyment-production-16a0.up.railway.app/admin/login', {
+                const authResponse = await fetch('https://airy-enjoyment-production-16a0.up.railway.app/admin/login', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -43,7 +43,7 @@
                 }
 
                 // Если авторизация прошла успешно, загружаем заявки
-                const response = await fetch('http://airy-enjoyment-production-16a0.up.railway.app/requests');
+                const response = await fetch('https://airy-enjoyment-production-16a0.up.railway.app/requests');
                 if (!response.ok) {
                     throw new Error('Ошибка при загрузке заявок');
                 }
